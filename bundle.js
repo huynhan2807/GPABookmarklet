@@ -1571,6 +1571,7 @@
                         rowsHtml += '<tr height="40" style="height: 40px;">' +
                             '<td></td>' +
                             '<td style="border: 1px solid #000; text-align: center; vertical-align: middle; mso-number-format:\'\\@\';">' + stt++ + '</td>' +
+                            '<td style="border: 1px solid #000; text-align: center; vertical-align: middle; mso-number-format:\'\\@\';">' + (row.semester || '-') + '</td>' +
                             '<td style="border: 1px solid #000; text-align: center; vertical-align: middle; mso-number-format:\'\\@\';">' + courseCode + '</td>' +
                             '<td style="border: 1px solid #000; text-align: left; vertical-align: middle; padding-left: 8px;">' + courseName + '</td>' +
                             '<td style="border: 1px solid #000; text-align: center; vertical-align: middle;">' + row.credit + '</td>' +
@@ -1595,8 +1596,9 @@
                     '<colgroup>' +
                     '  <col width="30" style="width: 30px;">' +
                     '  <col width="50" style="width: 50px;">' +
+                    '  <col width="80" style="width: 80px;">' +
                     '  <col width="95" style="width: 95px;">' +
-                    '  <col width="320" style="width: 320px;">' +
+                    '  <col width="270" style="width: 270px;">' +
                     '  <col width="75" style="width: 75px;">' +
                     '  <col width="95" style="width: 95px;">' +
                     '  <col width="95" style="width: 95px;">' +
@@ -1605,75 +1607,74 @@
                     '<tr height="30" style="height: 30px;">' +
                     '<td></td>' +
                     '<td colspan="3" style="text-align: center; font-size: 10pt; font-weight: bold; white-space: nowrap; vertical-align: middle;">ĐẠI HỌC QUỐC GIA TP.HỒ CHÍ MINH</td>' +
-                    '<td colspan="4" style="text-align: center; font-size: 10pt; font-weight: bold; white-space: nowrap; vertical-align: middle;">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</td>' +
+                    '<td colspan="5" style="text-align: center; font-size: 10pt; font-weight: bold; white-space: nowrap; vertical-align: middle;">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</td>' +
                     '</tr>' +
                     '<tr height="30" style="height: 30px;">' +
                     '<td></td>' +
                     '<td colspan="3" style="text-align: center; font-size: 10pt; font-weight: bold; white-space: nowrap; vertical-align: middle;">TRƯỜNG ĐẠI HỌC KHOA HỌC TỰ NHIÊN</td>' +
-                    '<td colspan="4" style="text-align: center; font-size: 10pt; font-weight: bold; white-space: nowrap; vertical-align: middle;">Độc lập - Tự do - Hạnh phúc</td>' +
+                    '<td colspan="5" style="text-align: center; font-size: 10pt; font-weight: bold; white-space: nowrap; vertical-align: middle;">Độc lập - Tự do - Hạnh phúc</td>' +
                     '</tr>' +
-                    '<tr height="24" style="height: 24px;"><td colspan="8">&nbsp;</td></tr>' +
+                    '<tr height="24" style="height: 24px;"><td colspan="9">&nbsp;</td></tr>' +
                     '<tr height="48" style="height: 48px;">' +
                     '<td></td>' +
-                    '<td colspan="7" style="text-align: center; font-size: 16pt; font-weight: bold; vertical-align: middle; white-space: nowrap;">BẢNG ĐIỂM HỌC TẬP</td>' +
+                    '<td colspan="8" style="text-align: center; font-size: 16pt; font-weight: bold; vertical-align: middle; white-space: nowrap;">BẢNG ĐIỂM HỌC TẬP</td>' +
                     '</tr>' +
-                    '<tr height="24" style="height: 24px;"><td colspan="8">&nbsp;</td></tr>' +
+                    '<tr height="24" style="height: 24px;"><td colspan="9">&nbsp;</td></tr>' +
                     '<tr height="32" style="height: 32px;">' +
                     '<td></td>' +
                     '<td colspan="3" style="font-size: 11pt; white-space: nowrap; vertical-align: middle;"><b>Họ và tên sinh viên:</b> ' + studentName + '</td>' +
-                    '<td colspan="4" style="font-size: 11pt; white-space: nowrap; vertical-align: middle;"><b>Trình độ đào tạo:</b> Đại học chính quy</td>' +
+                    '<td colspan="5" style="font-size: 11pt; white-space: nowrap; vertical-align: middle;"><b>Trình độ đào tạo:</b> Đại học chính quy</td>' +
                     '</tr>' +
                     '<tr height="32" style="height: 32px;">' +
                     '<td></td>' +
                     '<td colspan="3" style="font-size: 11pt; white-space: nowrap; vertical-align: middle;"><b>Trạng thái:</b> Đang học</td>' +
-                    '<td colspan="4" style="font-size: 11pt; white-space: nowrap; vertical-align: middle;"><b>Năm học:</b> ' + scopeText + '</td>' +
+                    '<td colspan="5" style="font-size: 11pt; white-space: nowrap; vertical-align: middle;"><b>Năm học:</b> ' + scopeText + '</td>' +
                     '</tr>' +
-                    '<tr height="24" style="height: 24px;"><td colspan="8">&nbsp;</td></tr>' +
-                    '<thead>' +
+                    '<tr height="24" style="height: 24px;"><td colspan="9">&nbsp;</td></tr>' +
                     '<tr height="40" style="height: 40px;">' +
                     '<th style="border: none; background: transparent;"></th>' +
                     '<th style="border: 1px solid #000; background-color: #f2f2f2; text-align: center; width: 50px; vertical-align: middle;">STT</th>' +
+                    '<th style="border: 1px solid #000; background-color: #f2f2f2; text-align: center; width: 80px; vertical-align: middle;">NH/HK</th>' +
                     '<th style="border: 1px solid #000; background-color: #f2f2f2; text-align: center; width: 95px; vertical-align: middle;">Mã HP</th>' +
-                    '<th style="border: 1px solid #000; background-color: #f2f2f2; text-align: left; width: 320px; vertical-align: middle; padding-left: 8px;">Tên học phần</th>' +
+                    '<th style="border: 1px solid #000; background-color: #f2f2f2; text-align: left; width: 270px; vertical-align: middle; padding-left: 8px;">Tên học phần</th>' +
                     '<th style="border: 1px solid #000; background-color: #f2f2f2; text-align: center; width: 75px; vertical-align: middle;">Số TC</th>' +
                     '<th style="border: 1px solid #000; background-color: #f2f2f2; text-align: center; width: 95px; vertical-align: middle;">Thang 10</th>' +
                     '<th style="border: 1px solid #000; background-color: #f2f2f2; text-align: center; width: 95px; vertical-align: middle;">Thang 4</th>' +
                     '<th style="border: 1px solid #000; background-color: #f2f2f2; text-align: center; width: 95px; vertical-align: middle;">Điểm chữ</th>' +
                     '</tr>' +
-                    '</thead>' +
                     '<tbody>' + rowsHtml + '</tbody>' +
-                    '<tr height="24" style="height: 24px;"><td colspan="8">&nbsp;</td></tr>' +
+                    '<tr height="24" style="height: 24px;"><td colspan="9">&nbsp;</td></tr>' +
                     '<tr height="32" style="height: 32px;">' +
                     '<td></td>' +
                     '<td colspan="3" style="font-size: 11pt; white-space: nowrap; vertical-align: middle;"><b>Điểm trung bình tích lũy (thang 10):</b> ' + toFixed(exportCal.gpa) + '</td>' +
-                    '<td colspan="4" style="font-size: 11pt; white-space: nowrap; vertical-align: middle;"><b>Tổng số tín chỉ tích lũy:</b> ' + exportCal.totalCredits + ' tín chỉ</td>' +
+                    '<td colspan="5" style="font-size: 11pt; white-space: nowrap; vertical-align: middle;"><b>Tổng số tín chỉ tích lũy:</b> ' + exportCal.totalCredits + ' tín chỉ</td>' +
                     '</tr>' +
                     '<tr height="32" style="height: 32px;">' +
                     '<td></td>' +
                     '<td colspan="3" style="font-size: 11pt; white-space: nowrap; vertical-align: middle;"><b>Điểm trung bình tích lũy (thang 4):</b> ' + toFixed(exportCal.fourGPA) + '</td>' +
-                    '<td colspan="4" style="font-size: 11pt; white-space: nowrap; vertical-align: middle;"><b>Xếp loại học lực tích lũy:</b> ' + degInfo.name + '</td>' +
+                    '<td colspan="5" style="font-size: 11pt; white-space: nowrap; vertical-align: middle;"><b>Xếp loại học lực tích lũy:</b> ' + degInfo.name + '</td>' +
                     '</tr>' +
-                    '<tr height="24" style="height: 24px;"><td colspan="8">&nbsp;</td></tr>' +
+                    '<tr height="24" style="height: 24px;"><td colspan="9">&nbsp;</td></tr>' +
                     '<tr height="32" style="height: 32px;">' +
                     '<td></td>' +
                     '<td colspan="3"></td>' +
-                    '<td colspan="4" style="text-align: center; font-style: italic; font-size: 11pt; white-space: nowrap; vertical-align: middle;">TP. Hồ Chí Minh, ' + dateStr + '</td>' +
+                    '<td colspan="5" style="text-align: center; font-style: italic; font-size: 11pt; white-space: nowrap; vertical-align: middle;">TP. Hồ Chí Minh, ' + dateStr + '</td>' +
                     '</tr>' +
                     '<tr height="32" style="height: 32px;">' +
                     '<td></td>' +
                     '<td colspan="3"></td>' +
-                    '<td colspan="4" style="text-align: center; font-weight: bold; font-size: 11pt; white-space: nowrap; vertical-align: middle;">NGƯỜI LẬP BẢNG ĐIỂM</td>' +
+                    '<td colspan="5" style="text-align: center; font-weight: bold; font-size: 11pt; white-space: nowrap; vertical-align: middle;">NGƯỜI LẬP BẢNG ĐIỂM</td>' +
                     '</tr>' +
-                    '<tr height="70" style="height: 70px;"><td colspan="8"></td></tr>' +
+                    '<tr height="70" style="height: 70px;"><td colspan="9"></td></tr>' +
                     '<tr height="32" style="height: 32px;">' +
                     '<td></td>' +
                     '<td colspan="3"></td>' +
-                    '<td colspan="4" style="text-align: center; font-weight: bold; font-size: 11pt; white-space: nowrap; vertical-align: middle;">' + studentName + '</td>' +
+                    '<td colspan="5" style="text-align: center; font-weight: bold; font-size: 11pt; white-space: nowrap; vertical-align: middle;">' + studentName + '</td>' +
                     '</tr>' +
-                    '<tr height="24" style="height: 24px;"><td colspan="8">&nbsp;</td></tr>' +
+                    '<tr height="24" style="height: 24px;"><td colspan="9">&nbsp;</td></tr>' +
                     '<tr height="30" style="height: 30px;">' +
                     '<td></td>' +
-                    '<td colspan="7" style="font-size: 10pt; font-style: italic; color: #444; vertical-align: middle;">(*): Bảng điểm này không thay thế bảng điểm chính thức từ Phòng đào tạo.</td>' +
+                    '<td colspan="8" style="font-size: 10pt; font-style: italic; color: #444; vertical-align: middle;">(*): Bảng điểm này không thay thế bảng điểm chính thức từ Phòng đào tạo.</td>' +
                     '</tr>' +
                     '</table>' +
                     '</body></html>';
@@ -1682,7 +1683,7 @@
                 let url = URL.createObjectURL(blob);
                 let hiddenElement = document.createElement('a');
                 hiddenElement.href = url;
-                hiddenElement.download = 'BangDiem_' + studentName.replace(/\s+/g, '_') + '.xls';
+                hiddenElement.download = 'BangDiem_NH_HK_' + studentName.replace(/\s+/g, '_') + '.xls';
                 document.body.appendChild(hiddenElement);
                 hiddenElement.click();
                 setTimeout(() => {
