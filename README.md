@@ -3,10 +3,10 @@
 
 ## Guideline
 - Step 1: You must be an HCMUS student.
-- Step 2: Open **[this link](https://dorayakiiiiz.github.io/GPABookmarklet)** to drag and drop the bookmarklet into your browser bookmarks bar.
+- Step 2: Open **[this link](https://huynhan2807.github.io/GPABookmarklet/)** to drag and drop the bookmarklet into your browser bookmarks bar.
 
 ```
-https://dorayakiiiiz.github.io/GPABookmarklet
+https://huynhan2807.github.io/GPABookmarklet/
 ```
 
 ## Key Features
